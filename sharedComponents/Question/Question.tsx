@@ -52,8 +52,8 @@ export default function Question({ text, index, onAskForNextQuestion, onAskForPr
           <span className={styles["options-label"]}>Me descreve</span>
         </div>
         <div>
-          <button onClick={onAskForPrevQuestion}>Anterior</button>
-          <button onClick={onAskForNextQuestion}>Próxima</button>
+          <button className="button" onClick={onAskForPrevQuestion}>Anterior</button>
+          <button className="button" onClick={onAskForNextQuestion}>Próxima</button>
         </div>
       </div>
     );

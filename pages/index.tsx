@@ -122,7 +122,7 @@ const Home: NextPage = () => {
         </a>
 
         {!shouldShowSeeResultsButton ? (
-          <div>
+          <div style={{display: "grid", justifyContent: "center", alignContent: "center", alignItems: "center", justifyItems: "center"}}>
             <Question
               selectedOption={selectedOption}
               setSelectedOption={setSelectedOption}

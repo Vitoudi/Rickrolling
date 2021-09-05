@@ -8,11 +8,14 @@ interface Props {
 
 export default function Header({}: Props): ReactElement {
     return (
-        <header className={styles["header"]}>
-            <div className={styles["logo"]}>
-                <Image src="/assets/logo.png" width={85} height={75} alt="icon"/>
-                <span>UNI MEDIA</span>
-            </div>
-        </header>
-    )
+      <header className={styles["header"]}>
+        <div className={styles["logo"]}>
+          <Image src="/assets/logo.png" width={85} height={75} alt="icon" />
+          <span>UNI MEDIA</span>
+        </div>
+        <div className={styles["menu"]}>
+          <Image src="/assets/menu.png" width={40} height={40} alt="icon" />
+        </div>
+      </header>
+    );
 }

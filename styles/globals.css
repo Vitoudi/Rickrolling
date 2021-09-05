@@ -18,3 +18,10 @@ a {
   margin: 0;
   color: rgb(82, 82, 82);
 }
+
+.button {
+  padding: .5rem;
+  border: none;
+  margin: 1rem;
+  cursor: pointer;
+}
