@@ -59,7 +59,10 @@ const Home: NextPage = () => {
           content="Cada universidade tem sua cultura e estilo, veja qual é ideal para
               você"
         />
-        <link rel="icon" href="/assets/logo.png" />
+        <link
+          rel="icon"
+          href="https://s2.glbimg.com/Rn_9w7YfqJk6mQ_3zVC_6f3kROw=/0x0:2048x1375/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/u/u/EhKGW8TbqBECpmDRrBBg/campus-pampulha.jpg"
+        />
         <meta
           property="og:title"
           content="Que universidade mais combina com sua personalidade?"
@@ -72,7 +75,7 @@ const Home: NextPage = () => {
         <meta property="og:image" content="/assets/banner.jpg" />
         <meta
           property="og:url"
-          content="http://euro-travel-example.com/index.htm"
+          content="https://unimedia-descubra-qual-universidade-mais-combina-com-sua-perso.vercel.app/"
         />
         <meta
           name="twitter:title"
@@ -83,7 +86,10 @@ const Home: NextPage = () => {
           content=" Cada universidade tem sua cultura e estilo, veja qual é ideal para
               você!"
         />
-        <meta name="twitter:image" content=" /assets/banner.jpg" />
+        <meta
+          name="twitter:image"
+          content=" https://s2.glbimg.com/Rn_9w7YfqJk6mQ_3zVC_6f3kROw=/0x0:2048x1375/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/u/u/EhKGW8TbqBECpmDRrBBg/campus-pampulha.jpg"
+        />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -149,20 +155,34 @@ const Home: NextPage = () => {
               onAskForNextQuestion={getNextQuestion}
               onAskForPrevQuestion={getPrevQuestion}
             />
-            {errorMsg && <div>{errorMsg}</div>}
+            {errorMsg && (
+              <div style={{ color: "darkred", textAlign: "center" }}>
+                {errorMsg}
+              </div>
+            )}
           </div>
         ) : (
           <RickRollLink>
-            <button>Ver resultados</button>
+            <div
+              style={{
+                display: "grid",
+                justifyContent: "center",
+                marginTop: "20px",
+              }}
+            >
+              <button className="button2">Ver resultados</button>
+            </div>
           </RickRollLink>
         )}
       </main>
 
       <footer className={styles["footer"]}>
-        <p>Conheça a Uni Media</p>
-        <p>Intagram</p>
-        <p>Intagram</p>
-        <p>Twitter</p>
+        <RickRollLink>
+          <p>Conheça a Uni Media</p>
+          <p>Intagram</p>
+          <p>Intagram</p>
+          <p>Twitter</p>
+        </RickRollLink>
       </footer>
     </div>
   );

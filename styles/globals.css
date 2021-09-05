@@ -19,9 +19,19 @@ a {
   color: rgb(82, 82, 82);
 }
 
-.button {
+.button, .button2 {
   padding: .5rem;
   border: none;
   margin: 1rem;
   cursor: pointer;
+  border-radius: 10px;
+}
+
+.button2 {
+  cursor: pointer;
+  background-color: rgb(52, 33, 97);
+  color: white;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1rem;
 }
