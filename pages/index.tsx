@@ -61,7 +61,7 @@ const Home: NextPage = () => {
         />
         <link
           rel="icon"
-          href="https://s2.glbimg.com/Rn_9w7YfqJk6mQ_3zVC_6f3kROw=/0x0:2048x1375/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/u/u/EhKGW8TbqBECpmDRrBBg/campus-pampulha.jpg"
+          href="/assets/logo.png"
         />
         <meta
           property="og:title"
@@ -178,10 +178,14 @@ const Home: NextPage = () => {
 
       <footer className={styles["footer"]}>
         <RickRollLink>
-          <p>Conheça a Uni Media</p>
-          <p>Intagram</p>
-          <p>Intagram</p>
-          <p>Twitter</p>
+          <div>
+            <p>Conheça a Uni Media</p>
+            <p>Intagram</p>
+            <p>Intagram</p>
+            <p>Twitter</p>
+            <p>Plataforma Escolhas</p>
+            <p>Uni Media 2021 &copy;</p>
+          </div>
         </RickRollLink>
       </footer>
     </div>
