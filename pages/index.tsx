@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { allQuestions } from '../data/questions'
 import Header from '../sharedComponents/Header/Header'
 import Question from '../sharedComponents/Question/Question'
+import RickRollLink from '../sharedComponents/RickRollLink'
 import styles from '../styles/Home.module.css'
 
 export type Option = number | null;
@@ -112,17 +113,34 @@ const Home: NextPage = () => {
       </div>
 
       <main className={styles["main-content"]}>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <div>
           <h2>Teste:</h2>
           <p>
             O teste a seguir foi baseado no estudo de 2016 da Universidade
             Federal de Minas Gerais (UFMG) e não reflete a opnião da Uni Media e
             seus associados.
           </p>
-        </a>
+        </div>
+
+        <div className={styles["card"]}>
+          <h2>Como funciona:</h2>
+          <p>
+            Para cada afirmação, você deve responder o quanto ela te descreve,
+            sendo 1, a firmação não me descreve e 5, a afirmação me descreve
+            muito bem.
+          </p>
+        </div>
 
         {!shouldShowSeeResultsButton ? (
-          <div style={{display: "grid", justifyContent: "center", alignContent: "center", alignItems: "center", justifyItems: "center"}}>
+          <div
+            style={{
+              display: "grid",
+              justifyContent: "center",
+              alignContent: "center",
+              alignItems: "center",
+              justifyItems: "center",
+            }}
+          >
             <Question
               selectedOption={selectedOption}
               setSelectedOption={setSelectedOption}
@@ -134,11 +152,18 @@ const Home: NextPage = () => {
             {errorMsg && <div>{errorMsg}</div>}
           </div>
         ) : (
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          <RickRollLink>
             <button>Ver resultados</button>
-          </a>
+          </RickRollLink>
         )}
       </main>
+
+      <footer className={styles["footer"]}>
+        <p>Conheça a Uni Media</p>
+        <p>Intagram</p>
+        <p>Intagram</p>
+        <p>Twitter</p>
+      </footer>
     </div>
   );
 }
